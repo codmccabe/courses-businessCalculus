@@ -1,0 +1,23 @@
+﻿\begin{tikzpicture}[]
+	\draw[dashed,gray!30](0,0)grid(5,5);
+	\draw[->](0,0)--(5,0)node[below right]{$x$};
+	\draw[->](0,0)--(0,5)node[above right]{$y$};
+% 	\draw[domain=1:4]plot(\x,{
+% 2*(
+% pow(\x,3)/3-5*pow(\x,2)/2+(6-1/6)*\x-5/3
+% )-2
+% });
+	\draw
+		(1,1)--(4,4)
+		(1.8,2pt)--(1.8,-2pt)node[below]{$x_1$}
+		(3.4,2pt)--(3.4,-2pt)node[below]{$x_2$}
+		(1,2pt)--(1,-2pt)node[below]{$a$}
+		(4,2pt)--(4,2pt)node[below]{$b$}
+		(2pt,1.8)--(-2pt,1.8)node[left]{$y_1$}
+		(2pt,3.4)--(-2pt,3.4)node[left]{$y_2$}
+	;
+	\draw[dashed]
+		(1.8,1.8)--(3.4,1.8)node[midway, below]{$\Delta x$}
+		(3.4,1.8)--(3.4,3.4)node[midway,right]{$\Delta y$}
+	;
+\end{tikzpicture}

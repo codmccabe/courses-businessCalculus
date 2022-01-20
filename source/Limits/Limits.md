@@ -13,12 +13,12 @@ $$m=\frac{\Delta y}{\Delta x}$$
 where $\Delta y = y_2 - y_1$ and $\Delta x = x_2 - x_1$. We say the change in the vertical direction (the $y$-direction) is $\Delta y$ and the change in the horizontal direction (the $x$-direction) is $\Delta x$.
 
 
-![Line Graph with $\Delta x$ and $\Delta y$.](attachment:lineGraph.v2.svg)
+![Line Graph with $\Delta x$ and $\Delta y$.](lineGraph.v2.svg)
 
 ### A "Nice" Function:
 Next, consider a "nice" function $y=f(x)=\frac{2 x^3}{3}-5 x^2+\frac{35 x}{3}-\frac{16}{3}$. Define the domain of $f$ as the set of all $x$ values on a closed interval $[a,b]$.
 
-![niceGraph1.svg](attachment:niceGraph1.svg)
+![niceGraph1.svg](niceGraph1.svg)
 
 If there are two values $x_1,x_2$ such that $a<x_1<x_2<b$, then $f(x_1)$, $f(x_2)$ exists and a line will pass through the points $(x_1,f(x_1))$ and $(x_2,f(x_2))$.
 
@@ -66,6 +66,7 @@ plot2d([
 ```maxima
 m(3/2,7/2);
 ```
+
 $$
 \tag{${\it \%o}_{9}$}-\frac{1}{6}
 $$
@@ -101,10 +102,10 @@ $$
 
 |$x_1$|$x_2$|$m$ Average Rate of Change from $x_2$ to $x_1$|
 |:---|:---|:---|
-|$1$|$\frac32$|$\frac73=2.\bar3$|
-|$\frac98$|$\frac32$|$\frac{193}{96}=2.01041\bar6$|
-|$\frac54$|$\frac32$|$\frac{41}{24}=1.708\bar3$|
-|$\frac{11}{8}$|$\frac32$|$\frac{137}{96}=1.42708\bar3$|
+|$1$|$\frac32$|$\frac73=2.\bar3 $|
+|$\frac98$|$\frac32$|$\frac{193}{96}=2.01041\bar6 $|
+|$\frac54$|$\frac32$|$\frac{41}{24}=1.708\bar3 $|
+|$\frac{11}{8}$|$\frac32$|$\frac{137}{96}=1.42708\bar 3$|
 
 
 ```maxima
@@ -114,11 +115,12 @@ expand(S(x,[1,9/8,5/4,11/8],3/2));
 
 
 
-\[\tag{${\it \%o}_{12}$}\left[ \frac{7\,x}{3}-\frac{1}{3} , \frac{193\,x}{96}+\frac{29}{192} , \frac{41\,x}{24}+\frac{29}{48} , \frac{137\,x}{96}+\frac{197}{192} \right] \]
+$$\tag{${\it \%o}_{12}$}\left[ \frac{7\,x}{3}-\frac{1}{3} , \frac{193\,x}{96}+\frac{29}{192} , \frac{41\,x}{24}+\frac{29}{48} , \frac{137\,x}{96}+\frac{197}{192} \right]
+$$
 
 
 
-![niceGraph5-2.svg](attachment:niceGraph5-2.svg)
+![niceGraph5-2.svg](niceGraph5-2.svg)
 
 ### From the Right:
 
@@ -128,12 +130,12 @@ This yields $\Delta x = \{ \frac18,\frac14,\frac38,\frac12 \}$.
 
 |$x_1$|$x_2$|$m$ Average Rate of Change from $x_2$ to $x_1$|
 |:---|:---|:---|
-|$\frac32$|$\frac{13}{8}$|$\frac{89}{96}=0.92708\bar3$|
-|$\frac32$|$\frac74$|$\frac{17}{24}=0.708\bar3$|
-|$\frac32$|$\frac{15}{8}$|$\frac{49}{96}=0.51041\bar6$|
-|$\frac32$|$2$|$\frac13=0.\bar3$|
+|$\frac32$|$\frac{13}{8}$|$\frac{89}{96}=0.92708\bar3 $|
+|$\frac32$|$\frac74$|$\frac{17}{24}=0.708\bar3 $|
+|$\frac32$|$\frac{15}{8}$|$\frac{49}{96}=0.51041\bar6 $|
+|$\frac32$|$2$|$\frac13=0.\bar3 $|
 
-![niceGraph6.svg](attachment:niceGraph6.svg)
+![niceGraph6.svg](niceGraph6.svg)
 
 
 ```maxima
@@ -143,13 +145,15 @@ expand(S(x,3/2,[13/8,7/4,15/8,2]));
 
 
 
-\[\tag{${\it \%o}_{13}$}\left[ \frac{89\,x}{96}+\frac{341}{192} , \frac{17\,x}{24}+\frac{101}{48} , \frac{49\,x}{96}+\frac{461}{192} , \frac{x}{3}+\frac{8}{3} \right] \]
+$$
+\tag{${\it \%o}_{13}$}\left[ \frac{89\,x}{96}+\frac{341}{192} , \frac{17\,x}{24}+\frac{101}{48} , \frac{49\,x}{96}+\frac{461}{192} , \frac{x}{3}+\frac{8}{3} \right] 
+$$
 
 
 
 So, to recap:
 
-$$f(x)=\frac{2x^3}{3}-5x^2+\frac{35x}{3}-\frac{16}{3}$$
+$$f(x)=\frac{2x^3}{3}-5x^2+\frac{35x}{3}-\frac{16}{3} $$
 
 with out loss of generality the average rate of change of the function $f$ from $x_2$ to $x_1$ will be defined as:
 
@@ -157,14 +161,14 @@ $$m=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}.$$
 
 |$x_1$|$x_2$|$m$ Average Rate of Change from $x_2$ to $x_1$|
 |:---|:---|:---|
-|$1$|$\frac32$|$\frac73=2.\bar3$|
-|$\frac98$|$\frac32$|$\frac{193}{96}=2.01041\bar6$|
-|$\frac54$|$\frac32$|$\frac{41}{24}=1.708\bar3$|
-|$\frac{11}{8}$|$\frac32$|$\frac{137}{96}=1.42708\bar3$|
-|$\frac32$|$\frac{13}{8}$|$\frac{89}{96}=0.92708\bar3$|
-|$\frac32$|$\frac74$|$\frac{17}{24}=0.708\bar3$|
-|$\frac32$|$\frac{15}{8}$|$\frac{49}{96}=0.51041\bar6$|
-|$\frac32$|$2$|$\frac13=0.\bar3$|
+|$1$|$\frac32$|$\frac73=2.\bar3 $|
+|$\frac98$|$\frac32$|$\frac{193}{96}=2.01041\bar6 $|
+|$\frac54$|$\frac32$|$\frac{41}{24}=1.708\bar3 $|
+|$\frac{11}{8}$|$\frac32$|$\frac{137}{96}=1.42708\bar3 $|
+|$\frac32$|$\frac{13}{8}$|$\frac{89}{96}=0.92708\bar3 $|
+|$\frac32$|$\frac74$|$\frac{17}{24}=0.708\bar3 $|
+|$\frac32$|$\frac{15}{8}$|$\frac{49}{96}=0.51041\bar6 $|
+|$\frac32$|$2$|$\frac13=0.\bar3 $|
 
 
 ```maxima
@@ -190,8 +194,9 @@ Notice that when $x_1=x_2=1.5$ or $\frac32$ the slope is undefined. This can be 
 
 
 
-\[\tag{${\it \%o}_{15}$}f\left(\frac{3}{2}\right)=\frac{19}{6}\]
-
+$$
+\tag{${\it \%o}_{15}$}f\left(\frac{3}{2}\right)=\frac{19}{6}
+$$
 
 
 $$
@@ -230,24 +235,22 @@ f([1,1.5,1.9,1.99,1.999]);
 
 
 
-\[\tag{${\it \%o}_{16}$}f\left(x\right):=\frac{x^2-4}{x-2}\]
+$$
+\tag{${\it \%o}_{16}$}f\left(x\right):=\frac{x^2-4}{x-2}
+$$
 
-
-
-
-
-
-\[\tag{${\it \%o}_{17}$}\left[ 3 , 3.5 , 3.899999999999998 , 3.989999999999979 , 3.99899999999986 \right] \]
-
+$$
+\tag{${\it \%o}_{17}$}\left[ 3 , 3.5 , 3.899999999999998 , 3.989999999999979 , 3.99899999999986 \right]
+$$
 
 
 |$x$|$y=f(x)$|
 |---|---|
-|$1$|$3$|
-|$1.5$|$3.5$|
-|$1.9$|$3.8\bar9$|
-|$1.99$|$3.98\bar9$|
-|$1.999$|$3.998\bar9$|
+|$1$|$3$ |
+|$1.5$|$3.5$ |
+|$1.9$|$3.8\bar9$ |
+|$1.99$|$3.98\bar9$ |
+|$1.999$|$3.998\bar9$ |
 
 #### From the Right
 
@@ -259,14 +262,16 @@ f([2.001,2.01,2.1,2.5,3]);
 
 
 
-\[\tag{${\it \%o}_{18}$}\left[ 4.00100000000014 , 4.009999999999977 , 4.099999999999998 , 4.5 , 5 \right] \]
+$$
+\tag{${\it \%o}_{18}$}\left[ 4.00100000000014 , 4.009999999999977 , 4.099999999999998 , 4.5 , 5 \right]
+$$
 
 
 
-|$x$|$y=f(x)$|
-|---|---|
-|$2.001$|$4.001$|
-|$2.01$|$4.01$|
+|$x$|$y=f(x)$ |
+|---|--- |
+|$2.001$|$4.001$ |
+|$2.01$|$4.01$ |
 |$2.1$|$4.1$|
 |$2.5$|$4.5$|
 |$3$|$5$|
@@ -281,7 +286,9 @@ f([1.9,1.99,1.999,2.001,2.01,2.1]);
 
 
 
-\[\tag{${\it \%o}_{19}$}\left[ 3.899999999999998 , 3.989999999999979 , 3.99899999999986 , 4.00100000000014 , 4.009999999999977 , 4.099999999999998 \right] \]
+$$
+\tag{${\it \%o}_{19}$}\left[ 3.899999999999998 , 3.989999999999979 , 3.99899999999986 , 4.00100000000014 , 4.009999999999977 , 4.099999999999998 \right]
+$$
 
 
 
@@ -301,7 +308,9 @@ plot2d(f(x),[x,0,5]);
 
 
 
-\[\tag{${\it \%o}_{20}$}\left[ \mbox{ /tmp/maxout172110.gnuplot } , \mbox{ /tmp/maxplot.svg } \right] \]
+$$
+\tag{${\it \%o}_{20}$}\left[ \mbox{ /tmp/maxout172110.gnuplot } , \mbox{ /tmp/maxplot.svg } \right]
+$$
 
 
 
@@ -350,9 +359,11 @@ Shouldn't there be something; anything, that allows $f$ to be $4$ as $x$ approac
 
 ### Definition of a Limit (Intuitive Approach)
 The function $f$ has the limit $L$ as $x$ approaches $a$, written
+
 $$
 \lim_{x\to a}f(x)=L
 $$
+
 if the value of $f(x)$ can be made close to the number $L$ as we
 please by taking $x$ sufficiently close to (but not equal to) $a$.
 
@@ -366,7 +377,13 @@ We will demonstrate this definition with these three methods:
 ### Numerical
 
 #### Example
-Let $k(x)=\dfrac{x^2 - 9}{x-3}$ and evaluate $$\lim_{x\to 3}k(x).$$ We have done this already in a previous example. We will use values close to $3$ but not $3$ and notice what $k$ is approaching.
+Let $k(x)=\dfrac{x^2 - 9}{x-3}$ and evaluate 
+
+$$
+\lim_{x\to 3}k(x).
+$$ 
+
+We have done this already in a previous example. We will use values close to $3$ but not $3$ and notice what $k$ is approaching.
 
 
 ```maxima
@@ -377,14 +394,13 @@ k([2,2.5,2.9,2.99,2.999,3.001,3.01,3.1,3.5,4]);
 
 
 
-\[\tag{${\it \%o}_{21}$}k\left(x\right):=\frac{x^2-9}{x-3}\]
+$$
+\tag{${\it \%o}_{21}$}k\left(x\right):=\frac{x^2-9}{x-3}
+$$
 
-
-
-
-
-
-\[\tag{${\it \%o}_{22}$}\left[ 5 , 5.5 , 5.899999999999993 , 5.990000000000023 , 5.99899999999986 , 6.00100000000014 , 6.009999999999977 , 6.100000000000007 , 6.5 , 7 \right] \]
+$$
+\tag{${\it \%o}_{22}$}\left[ 5 , 5.5 , 5.899999999999993 , 5.990000000000023 , 5.99899999999986 , 6.00100000000014 , 6.009999999999977 , 6.100000000000007 , 6.5 , 7 \right]
+$$
 
 
 
@@ -400,7 +416,9 @@ limit(k(x),x,3);
 
 
 
-\[\tag{${\it \%o}_{23}$}6\]
+$$
+\tag{${\it \%o}_{23}$}6
+$$
 
 
 
@@ -415,13 +433,14 @@ q(x) = \begin{cases}
     3 & x>1
     \end{cases}
 $$
+
 The plot of this would be the following:
 
-![graphMethod1.svg](attachment:graphMethod1.svg)
+![graphMethod1.svg](graphMethod1.svg)
 
 From the left and from the right of the graph near the hole we see that $q$ approaches $1$ as $x$ approaches $1$.
 
-![graphMethod2.svg](attachment:graphMethod2.svg)
+![graphMethod2.svg](graphMethod2.svg)
 
 Thus,
 
@@ -433,6 +452,7 @@ Notice throughout the presentation about the limit of $q(x)$ the exact point $(1
 
 #### Corollary 1
 Let $f$ and $g$ be defined near $x=a$ and $f(x)=g(x)$. Then
+
 $$
 \lim_{x\to a}f(x)=\lim_{x\to a}g(x).
 $$
@@ -440,13 +460,15 @@ $$
 #### Properties of Limits
 
 Suppose
+
 $$
 \lim_{x\to a}f(x)=L\,\,\text{ and }\,\,\lim_{x\to a}g(x)=M
 $$
+
 Then
 1. ${\displaystyle \lim_{x\to a}x=a}$
 2. ${\displaystyle \lim_{x\to a}b}=b$
-3.  ${\displaystyle \lim_{x\to a}\left[f(x)\right]}^{r}{\displaystyle =\left[\lim_{x\to a}f(x)\right]^{r}=L^{r}}$
+3. ${\displaystyle \lim_{x\to a}\left[f(x)\right]}^{r}{\displaystyle =\left[\lim_{x\to a}f(x)\right]^{r}=L^{r}}$
 where $r$ is a positive number.
 4. ${\displaystyle \lim_{x\to a}cf(x)=c\lim_{x\to a}f(x)=cL}$ where
 $c$ is a real number.
@@ -456,7 +478,11 @@ $c$ is a real number.
 where $M\ne0$.
 
 #### Example
-Evaluate $$\lim_{x\to a}\dfrac{x^3 - a^3}{x-a}$$ where $a$ is a nonzero real number.
+Evaluate 
+
+$$\lim_{x\to a}\dfrac{x^3 - a^3}{x-a}$$ 
+
+where $a$ is a nonzero real number.
 
 $$
 \begin{align*}
@@ -478,18 +504,22 @@ Earlier we talked about $x$ approaching a number from the left and from the righ
 
 The function $f$ has the right-hand limit $L$ as $x$ approaches
 $a$ from the right, written
+
 $$
 \lim_{x\to a^{+}}f(x)=L
 $$
+
 if the value of $f(x)$ can be made as close to $L$ as we please
 by taking $x$ sufficiently close to (but not equal to) $a$ and to
 the right of $a$.
 
 Similarly, the function $f$ has the left-hand limit $M$ as $x$
 approaches $a$ from the left, written
+
 $$
 \lim_{x\to a^{-}}f(x)=M
 $$
+
 if the values of $f(x)$ can be made as close to $M$ as we please
 by taking $x$ sufficiently close to (but not equal to) $a$ and to
 the left of $a$.
@@ -498,6 +528,7 @@ the left of $a$.
 
 Let $f$ be a function that is defined for all values of $x$ close
 to $x=a$ with the possible exception of $a$ itself. Then
+
 $$
 \begin{aligned}\lim_{x\to a}f(x) & =L & \text{if and only if} &  & \lim_{x\to a^{+}}f(x) & =\lim_{x\to a^{-}}f(x)=L.\end{aligned}
 $$
@@ -507,18 +538,24 @@ $$
 If $\lim_{x\to a^{+}}f(x)\ne\lim_{x\to a^{-}}f(x)$, then we say $\lim_{x\to a}f(x)$ does not exists.
 
 #### Example
-Let $$f(x) = \begin{cases}
+Let 
+
+$$
+f(x) = \begin{cases}
     1 & x>0\\
     -1 & x<0
     \end{cases}
 $$
 
 Then
+
 $$\lim_{x\to 0^-}f(x)=\lim_{x\to 0^-}-1=-1$$
+
 $$\lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}1 = 1$$
+
 Finally, $\lim_{x\to 0}f(x)$ does not exist since $\lim_{x\to 0^-}f(x)\ne \lim_{x\to 0^+}f(x)$ by Corollary 2.
 
-![setGraph.svg](attachment:setGraph.svg)
+![setGraph.svg](setGraph.svg)
 
 ## Limits and Infinity
 
@@ -533,14 +570,18 @@ float(p([10^0,10^1,10^2,10^3,10^4,10^5,10^6,10^7,10^8,10^9]));
 
 
 
-\[\tag{${\it \%o}_{24}$}p\left(x\right):=\frac{1}{x}+1\]
+$$
+\tag{${\it \%o}_{24}$}p\left(x\right):=\frac{1}{x}+1
+$$
 
 
 
 
 
 
-\[\tag{${\it \%o}_{25}$}\left[ 2.0 , 1.1 , 1.01 , 1.001 , 1.0001 , 1.00001 , 1.000001 , 1.0000001 , 1.00000001 , 1.000000001 \right] \]
+$$
+\tag{${\it \%o}_{25}$}\left[ 2.0 , 1.1 , 1.01 , 1.001 , 1.0001 , 1.00001 , 1.000001 , 1.0000001 , 1.00000001 , 1.000000001 \right]
+$$
 
 
 
@@ -558,7 +599,9 @@ float(p([-10^0,-10^1,-10^2,-10^3,-10^4,-10^5,-10^6,-10^7,-10^8,-10^9]));
 
 
 
-\[\tag{${\it \%o}_{26}$}\left[ 0.0 , 0.9 , 0.99 , 0.999 , 0.9999 , 0.99999 , 0.999999 , 0.9999999 , 0.99999999 , 0.999999999 \right] \]
+$$
+\tag{${\it \%o}_{26}$}\left[ 0.0 , 0.9 , 0.99 , 0.999 , 0.9999 , 0.99999 , 0.999999 , 0.9999999 , 0.99999999 , 0.999999999 \right]
+$$
 
 
 
@@ -576,7 +619,9 @@ float(p([-10^0,-10^(-1),-10^(-2),-10^(-3),-10^(-4),-10^(-5),-10^(-6),-10^(-7),-1
 
 
 
-\[\tag{${\it \%o}_{27}$}\left[ 0.0 , -9.0 , -99.0 , -999.0 , -9999.0 , -99999.0 , -999999.0 , -9999999.0 , -9.999999900000001 \times 10^{+7} , -9.99999999 \times 10^{+8} \right] \]
+$$
+\tag{${\it \%o}_{27}$}\left[ 0.0 , -9.0 , -99.0 , -999.0 , -9999.0 , -99999.0 , -999999.0 , -9999999.0 , -9.999999900000001 \times 10^{+7} , -9.99999999 \times 10^{+8} \right]
+$$
 
 
 
@@ -594,7 +639,9 @@ float(p([10^0,10^(-1),10^(-2),10^(-3),10^(-4),10^(-5),10^(-6),10^(-7),10^(-8),10
 
 
 
-\[\tag{${\it \%o}_{28}$}\left[ 2.0 , 11.0 , 101.0 , 1001.0 , 10001.0 , 100001.0 , 1000001.0 , 1.0000001 \times 10^{+7} , 1.00000001 \times 10^{+8} , 1.000000001 \times 10^{+9} \right] \]
+$$
+\tag{${\it \%o}_{28}$}\left[ 2.0 , 11.0 , 101.0 , 1001.0 , 10001.0 , 100001.0 , 1000001.0 , 1.0000001 \times 10^{+7} , 1.00000001 \times 10^{+8} , 1.000000001 \times 10^{+9} \right]
+$$
 
 
 
@@ -608,26 +655,32 @@ $$\lim_{x\to 0^+}p(x)=+\infty$$
 
 The function $f$ has the limit $L$ as $x$ increases without bound
 (or as $x$ approaches infinity), written
+
 $$
 \lim_{x\to\infty}f(x)=L
 $$
+
 if $f(x)$ can be made arbitrarily close to $L$ by taking $x$ large
 enough.
 
 Similarly, the function $f$ has the limit $M$ as $x$ decreases
 without bounds (or as $x$ approaches negative infinity), written
+
 $$
 \lim_{x\to-\infty}f(x)=M
 $$
+
 if $f(x)$ can be made arbitrarily close to $M$ by taking $x$ to
 be negative and sufficiently large in absolute value.
 
 #### Theorem 5
 
 For all $n>0$,
+
 $$
 \lim_{x\to\pm\infty}\frac{1}{x^{n}}=0
 $$
+
 provided that $\frac{1}{x^{n}}$ is defined.
 
 Notice that the following example is were $x\to \infty$
@@ -637,7 +690,8 @@ Notice that the following example is were $x\to \infty$
 Evaluate $$\lim_{x\to \infty}\dfrac{x^2+9x+4}{3x^2+8x-5}$$
 
 SOLUTION:
-Note: $$\lim _{x\to \infty}c =c$$ where $c$ is some real number and $$\lim_{x\to \infty}\frac{1}{x}=0$$
+Note: $\lim _{x\to \infty}c =c$ where $c$ is some real number and $\lim_{x\to \infty}\frac{1}{x}=0$.
+
 $$
 \begin{align*}
 \lim_{x\to\infty}\dfrac{x^{2}+9x+4}{3x^{2}+8x-5} & =\lim_{x\to\infty}\left(\dfrac{x^{2}+9x+4}{3x^{2}+8x-5}\right)\cdot\left(\dfrac{\frac{1}{x^{2}}}{\frac{1}{x^{2}}}\right)\\
@@ -650,8 +704,3 @@ $$
  & =\frac{1}{3}
 \end{align*}
 $$
-
-
-```maxima
-
-```

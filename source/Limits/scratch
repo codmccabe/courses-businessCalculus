@@ -1,0 +1,14 @@
+﻿\begin{tikzpicture}[]
+	\draw[->](0,0)--(11,0)node[below right]{$k$};
+	\draw[->](0,0)--(0,4)node[above right]{$a_n$};
+	\foreach \x in {1,2,3,...,10}
+		\draw(\x,2pt)--(\x,-2pt)node[below]{$\x$};
+	\foreach \x in {1,2,3}
+		\draw(2pt,\x)--(-2pt,\x)node[left]{$\x$};
+	\draw[ultra thin,dashed](0,2)--(11,2)node[right]{2};
+	\foreach \x in {1,2,3,...,10}
+		\foreach \y in {1,1.5,1.9,1.99,1.999,2.001,2.01,2.1,2.5,3}
+			\draw[fill=red](\x,\y)circle(1pt);
+
+
+\end{tikzpicture}

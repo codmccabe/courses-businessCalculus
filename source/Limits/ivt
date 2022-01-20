@@ -1,0 +1,21 @@
+﻿\usetikzlibrary{arrows} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary[arrows] % ConTEXt when using Tik Z
+
+\begin{tikzpicture}
+	\draw[<->](-0.5,0)--(5,0)node[below right]{$x$};
+	\draw[<->](0,-0.5)--(0,5)node[above right]{$y$};
+	\draw[domain=0.5:3.25,*-*,samples=100,blue]plot(\x,{-\x*\x*\x+6*\x*\x-9*\x+4.5})node[below right]{$y=f(x)$};
+	\draw
+		(0.5,2pt)--(0.5,-2pt)node[below]{$a$}
+		(3.25,2pt)--(3.25,-2pt)node[below]{$b$}
+		(2,2pt)--(2,-2pt)node[below]{$c$}
+		(2pt,1.375)--(-2pt,1.375)node[left]{$f(a)$}
+		(2pt,2.5)--(-2pt,2.5)node[left]{$f(c)$}
+		(2pt,4.297)--(-2pt,4.297)node[left]{$f(b)$}
+	;
+	\draw[dashed,gray]
+		(0.5,0)--(0.5,1.375)--(0,1.375)
+		(3.25,0)--(3.25,4.297)--(0,4.297)
+		(2,0)--(2,2.5)--(0,2.5)
+	;
+\end{tikzpicture}

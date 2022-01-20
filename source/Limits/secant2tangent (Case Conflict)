@@ -1,0 +1,15 @@
+﻿\begin{tikzpicture}[scale=2.5]
+	\draw[dashed,gray!20](2,-1)grid(4,2);
+	\draw(2,0)--(4,0)node[right]{$x$-axis};
+	\draw[thick,domain=2:4,->]plot(\x,{(1/125)*pow(\x,4)});
+	\draw[purple,fill=purple](3,{(1/125)*pow(3,4)})circle(1.5pt)node[above left]{$(3,\frac{81}{125})$};
+	\draw[blue,domain=2:4]plot(\x,{(108/125)*\x-243/125})node[above right]{Tangent Line};	
+	\foreach \b in {2,2.5,2.9}
+		\draw[domain=2:4,red]
+			plot
+				(\x,{(1/(125*\b-375))*(pow(\b,4)*\x-81*\x-3*pow(\b,4)+243)+81/125})
+				node[right]{When $b=\b$.} 
+			(\b,2pt)--(\b,-2pt)node[below]{\footnotesize{\b}}
+			(2,{(1/125)*pow(\b,4)})node[left]{$f(\b)$}
+		;
+\end{tikzpicture}

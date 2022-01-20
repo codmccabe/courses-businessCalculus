@@ -1,0 +1,28 @@
+﻿\usetikzlibrary {datavisualization}
+\usetikzlibrary{spy}
+\begin{tikzpicture}	[
+	spy using outlines={rectangle,
+		magnification=12,
+		size=2cm,
+		%width=4cm,
+		%height=9.5cm, 
+		connect spies}]
+	\datavisualization[
+		school book axes, 
+		visualize as scatter,
+		scatter = {style={mark=+,mark size = 2pt}}]
+		data {
+x,y
+1,1
+2,1.5
+3,1.9
+4,1.99
+5,2.01
+6,2.1
+7,2.5
+8,3			
+		};
+	\draw[blue,ultra thin](0,2)--(9,2);
+	\spy[red] on (4,2) in node [left] at (4,4);
+	\spy[red] on (5,2) in node[right] at (5,4); 
+\end{tikzpicture}
