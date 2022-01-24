@@ -139,7 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'BusinessCalculus.tex', 'Business Calculus Documentation',
+    (master_doc, 'BusinessCalculus.tex', 'Business Calculus',
      'Michael McCabe', 'manual'),
 ]
 
